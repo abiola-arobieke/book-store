@@ -1,11 +1,11 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import BookList from './BookList';
 
 function Books() {
-  const books = [
+  const [books, setBook] = useState([
     {
       id: 1,
-      bookType: 'Action',
+      category: 'Action',
       title: 'The serial killer',
       author: 'Oyinkan Braithwaite',
       progress: 75,
@@ -14,7 +14,7 @@ function Books() {
     },
     {
       id: 2,
-      bookType: 'Drama',
+      category: 'Drama',
       title: 'Things fall apart',
       author: 'Chinua Achebe',
       progress: 63,
@@ -23,15 +23,19 @@ function Books() {
     },
     {
       id: 3,
-      bookType: 'Play-wright',
+      category: 'Play-wright',
       title: 'Welcome to lagos',
       author: 'Chibundu Onuzo',
       progress: 14,
       status: 'reading',
       page: 'page 12',
     },
-  ];
-  return <BookList booksProp={books} />;
+  ]);
+
+  const handleRemove = (id) => {
+    setBook([...books.filter((book) => book.id !== id)]);
+  };
+  return <BookList booksProp={books} removeBook={handleRemove} />;
 }
 
 export default Books;
