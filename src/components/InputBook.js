@@ -31,8 +31,17 @@ function InputBooks({ addNewBook }) {
     <div className="md-6 form-input">
       <div className="form-title">Add New Book</div>
       <form className="d-flex w-100c spc-btw form" onSubmit={handleSubmit}>
-        <input className="w-60c text-input" type="text" onChange={handleInput} placeholder="BOOK TITLE" />
-        <select className="w-30c cat grey-light" name="choice" onChange={handleChange}>
+        <input
+          className="w-60c text-input"
+          type="text"
+          onChange={handleInput}
+          placeholder="BOOK TITLE"
+        />
+        <select
+          className="w-30c cat grey-light"
+          name="choice"
+          onChange={handleChange}
+        >
           <option value="">Category</option>
           {categories.map((category) => (
             <option key={category.id} value={category.name}>
@@ -40,7 +49,9 @@ function InputBooks({ addNewBook }) {
             </option>
           ))}
         </select>
-        <button className="w-20c btn-add" type="submit">Add book</button>
+        <button className="w-20c btn-add" type="submit">
+          Add book
+        </button>
       </form>
     </div>
   );
