@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
-function BookItem({ book }) {
+function BookItem({ book, removeBook }) {
   return (
     <div className="d-flex book-info container">
       <div className="book-detail w-50c">
         <div>
-          <div className="book-category">{book.bookType}</div>
+          <div className="book-category">{book.category}</div>
           <div className="book-title">{book.title}</div>
           <div className="author text-blue">{book.author}</div>
         </div>
@@ -15,7 +15,7 @@ function BookItem({ book }) {
           <button type="button" className="text-blue btn-action line">
             Comment
           </button>
-          <button type="button" className="text-blue btn-action line pd-l10">
+          <button onClick={removeBook} type="button" className="text-blue btn-action line pd-l10">
             Remove
           </button>
           <button type="button" className="text-blue btn-action line pd-l10">
@@ -48,6 +48,7 @@ function BookItem({ book }) {
 
 BookItem.propTypes = {
   book: PropTypes.instanceOf(Object).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 export default BookItem;
