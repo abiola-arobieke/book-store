@@ -5,7 +5,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 function Navbar() {
   return (
     <nav className="navigation">
-      <div className="container navbar d-flex">
+      <div className="navbar md-6 d-flex">
         <div className="d-flex align-center w-100c">
           <Link to="/" className="logo">
             Bookstore CMS
