@@ -1,13 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&family=Pacifico&family=Roboto&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo,
+.nav-item {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.logo {
+  width: 20%;
+  font-size: 1.875rem;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.nav-item {
+  letter-spacing: 1.9px;
+  color: #121212;
+  font-size: 0.813rem;
+  text-transform: uppercase;
+  padding: 0.375rem 2.938rem 0.125rem 0;
+}
+
+.navbar {
+  padding: 1.438rem 0 1.688rem 0;
+}
+
+.navigation {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+ul {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+.book-category {
+  color: #121212;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.book-info {
+  padding: 1rem 0 1rem 0;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  border: 1px solid red;
+}
+
+.book-info:hover {
+  background-color: #e8e8e8;
+}
+
+.book-title {
+  font-size: 1.375rem;
+  font-family: 'RobotoSlab', sans-serif;
+  letter-spacing: -0.2px;
+  color: #121212;
+  padding: 5px 0;
+}
+
+.author {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.book-feedback {
+  padding-top: 1.318rem;
+  padding-bottom: 1.75rem;
+  font-family: 'RobotoSlab', sans-serif;
+  font-weight: 300;
+  letter-spacing: normal;
+}
+
+.btn-action {
+  border: none;
+  font-size: 0.875rem;
+  padding: 6px 10px 6px 0;
+  background-color: transparent;
+}
+
+.line {
+  border-right: 1px solid #e8e8e8;
+}
+
+.line:hover {
+  border-right: 2px solid #4386bf;
+}
+
+.fa-circle-notch {
+  color: #379cf6;
+  font-size: 3.5rem;
+}
+
+.rating {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #121212;
+}
+
+.container {
+  margin: 0 6.25rem;
+}
+
+.progress-bar {
+  gap: 20px;
+  align-items: center;
+}
+
+.progress-info {
+  padding: 20px 0;
+}
+
+.btn-progress {
+  background-color: #0290ff;
+  color: #fff;
+  padding: 16px 14px;
+  border-radius: 4px;
+  width: 15rem;
+  font-size: 0.813rem;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 1.4rem;
+}
+
+.progress-stat {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.chapter {
+  font-family: 'RobotoSlab', sans-serif;
+  font-size: 1rem;
+  color: #121212;
+}
+
+/* Utility classes */
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.text-blue {
+  color: #4386bf;
+}
+
+.fa-user {
+  color: #0290ff;
+  font-size: 20px;
+  border: 1px solid #e8e8e8;
+  padding: 0.875rem;
+  border-radius: 50%;
+}
+
+.pd-l10 {
+  padding-left: 10px;
+}
+
+.nav-link {
+  width: 80%;
+}
+
+.w-100c {
+  width: 100%;
+}
+
+.spc-btw {
+  justify-content: space-between;
+}
+
+.w-50c {
+  width: 50%;
 }
