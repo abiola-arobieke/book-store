@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
+import { removeBook } from '../redux/books/booksSlice';
 
-function BookItem({ book, removeBook }) {
+function BookItem({ book }) {
+  const dispatch = useDispatch();
   return (
     <div className="d-flex book-info container">
       <div className="book-detail w-50c">
@@ -15,7 +18,13 @@ function BookItem({ book, removeBook }) {
           <button type="button" className="text-blue btn-action line">
             Comment
           </button>
-          <button onClick={removeBook} type="button" className="text-blue btn-action line pd-l10">
+          <button
+            onClick={() => {
+              dispatch(removeBook(book.item_id));
+            }}
+            type="button"
+            className="text-blue btn-action line pd-l10"
+          >
             Remove
           </button>
           <button type="button" className="text-blue btn-action line pd-l10">
@@ -27,16 +36,13 @@ function BookItem({ book, removeBook }) {
         <div className="d-flex w-50c progress-bar">
           <FontAwesomeIcon icon={faCircleNotch} />
           <div>
-            <div className="rating">
-              {book.progress}
-              %
-            </div>
-            <div>{book.status}</div>
+            <div className="rating">74%</div>
+            <div>completed</div>
           </div>
         </div>
         <div className="w-50c progress-info">
           <div className="progress-stat">Current</div>
-          <div className="chapter">{book.page}</div>
+          <div className="chapter">Chapter 18</div>
           <button className="btn-progress" type="button">
             Update progress
           </button>
@@ -48,7 +54,6 @@ function BookItem({ book, removeBook }) {
 
 BookItem.propTypes = {
   book: PropTypes.instanceOf(Object).isRequired,
-  removeBook: PropTypes.func.isRequired,
 };
 
 export default BookItem;
