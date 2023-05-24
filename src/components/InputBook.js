@@ -1,7 +1,9 @@
-import PropTypes from 'prop-types';
+import { v4 as uuidv4 } from 'uuid';
+import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import { addBook } from '../redux/books/booksSlice';
 
-function InputBooks({ addNewBook }) {
+function InputBooks() {
   const categories = [
     { id: 1, name: 'Action' },
     { id: 2, name: 'Drama' },
@@ -11,6 +13,7 @@ function InputBooks({ addNewBook }) {
 
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState('');
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setCategory(e.target.value);
@@ -23,7 +26,13 @@ function InputBooks({ addNewBook }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim() && category) {
-      addNewBook(title, category);
+      const newBook = {
+        item_id: uuidv4(4),
+        category,
+        title,
+        author: 'John Doe',
+      };
+      dispatch(addBook(newBook));
     }
   };
 
@@ -56,9 +65,5 @@ function InputBooks({ addNewBook }) {
     </div>
   );
 }
-
-InputBooks.propTypes = {
-  addNewBook: PropTypes.func.isRequired,
-};
 
 export default InputBooks;
