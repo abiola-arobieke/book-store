@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
-import { removeBook } from '../redux/books/booksSlice';
+import { deleteBook } from '../redux/books/booksSlice';
 
 function BookItem({ book }) {
   const dispatch = useDispatch();
@@ -20,7 +20,7 @@ function BookItem({ book }) {
           </button>
           <button
             onClick={() => {
-              dispatch(removeBook(book.item_id));
+              dispatch(deleteBook(book.item_id));
             }}
             type="button"
             className="text-blue btn-action line pd-l10"
