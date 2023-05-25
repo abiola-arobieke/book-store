@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
-import { addBook } from '../redux/books/booksSlice';
+import { createBook } from '../redux/books/booksSlice';
 
 function InputBooks() {
   const categories = [
@@ -27,12 +27,12 @@ function InputBooks() {
     e.preventDefault();
     if (title.trim() && category) {
       const newBook = {
-        item_id: uuidv4(4),
-        category,
+        item_id: crypto.randomUUID() + uuidv4(4),
         title,
+        category,
         author: 'John Doe',
       };
-      dispatch(addBook(newBook));
+      dispatch(createBook(newBook));
     }
   };
 
