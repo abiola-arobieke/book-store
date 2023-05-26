@@ -12,10 +12,10 @@ function Navbar() {
           </Link>
           <div className="d-flex spc-btw nav-link">
             <ul className="d-flex">
-              <Link to="/" className="nav-item txt-upper txt-dark">
+              <Link to="/" className="nav-item  ft-8a txt-upper txt-dark">
                 Books
               </Link>
-              <Link to="/categories" className="nav-item txt-upper txt-dark">
+              <Link to="/categories" className="nav-item ft-8a txt-upper txt-dark">
                 Categories
               </Link>
             </ul>

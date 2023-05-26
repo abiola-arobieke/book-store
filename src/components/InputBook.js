@@ -38,16 +38,16 @@ function InputBooks() {
 
   return (
     <div className="md-6 form-input">
-      <div className="form-title txt-upper">Add New Book</div>
+      <div className="form-title txt-upper txt-dark">Add New Book</div>
       <form className="d-flex w-100c spc-btw form" onSubmit={handleSubmit}>
         <input
-          className="w-60c text-input"
+          className="w-60c text-input bdr-4"
           type="text"
           onChange={handleInput}
           placeholder="BOOK TITLE"
         />
         <select
-          className="w-30c cat txt-upper"
+          className="w-30c cat txt-upper bdr-4 txt-dark"
           name="choice"
           onChange={handleChange}
         >
@@ -58,7 +58,7 @@ function InputBooks() {
             </option>
           ))}
         </select>
-        <button className="w-20c btn-add bg-primary txt-upper" type="submit">
+        <button className="w-20c btn-add bg-primary txt-upper bdr-4" type="submit">
           Add book
         </button>
       </form>

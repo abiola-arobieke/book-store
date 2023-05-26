@@ -2,18 +2,17 @@
 
 body {
   margin: 0;
-  background-color: #fafafa;
 }
 
 .logo,
 .nav-item {
   font-stretch: normal;
   text-decoration: none;
+  font-size: 1.875rem;
 }
 
 .logo {
   width: 300px;
-  font-size: 1.875rem;
   gap: 20px;
   font-weight: 900;
   letter-spacing: normal;
@@ -21,7 +20,6 @@ body {
 
 .nav-item {
   letter-spacing: 1.9px;
-  font-size: 0.813rem;
   padding: 0.375rem 2.938rem 0.125rem 0;
 }
 
@@ -42,17 +40,11 @@ ul {
 .book-category {
   font-weight: bolder;
   opacity: 0.6;
-  font-size: 0.875rem;
 }
 
 .book-info {
   padding: 2rem 9.188rem 1.625rem 1.688rem;
   margin: 2.313rem 6.25rem 0;
-  border-radius: 4px;
-  font-size: 0.875rem;
-}
-
-.border-grey {
   border: 1px solid #e8e8e8;
 }
 
@@ -68,7 +60,7 @@ ul {
 .progress-stat,
 .book-title,
 .chapter {
-  font-family: 'RobotoSlab', sans-serif;
+  font-family: 'RobotoSlab-Light', sans-serif;
 }
 
 .book-category,
@@ -81,21 +73,17 @@ ul {
 }
 
 .author {
-  font-size: 0.875rem;
-  font-weight: 300;
   padding-top: 0.2rem;
 }
 
 .book-feedback {
   padding-top: 1.318rem;
   padding-bottom: 0.55rem;
-  font-weight: 300;
   letter-spacing: normal;
 }
 
 .btn-action {
   border: none;
-  font-size: 0.875rem;
   padding: 6px 10px 6px 0;
   background-color: transparent;
 }
@@ -134,21 +122,22 @@ ul {
 
 .progress-bar {
   gap: 20px;
-  align-items: center;
   border-right: 0.125rem solid #e8e8e8;
   padding-right: 10%;
 }
 
 .btn-progress {
-  color: #fff;
   border-radius: 3px;
-  font-size: 0.813rem;
-  font-weight: 300;
   border: none;
   padding: 0.638rem 1.375rem;
   margin-top: 1.4rem;
-  width: auto;
+  width: max-content;
   letter-spacing: 0.5px;
+}
+
+.btn-progress,
+.btn-add {
+  color: #fff;
 }
 
 .progress-info {
@@ -164,24 +153,20 @@ ul {
 }
 
 .progress-stat {
-  font-size: 0.813rem;
   font-weight: 400;
   padding-bottom: 8px;
-  color: #121212;
-  opacity: 0.5;
-  text-transform: uppercase;
 }
 
-.status {
-  font-size: 0.875rem;
-  color: #121212;
+.status,
+.progress-stat,
+.cat,
+.form-title {
   opacity: 0.5;
 }
 
 .chapter {
-  font-size: 1rem;
+  font-size: 1.12rem;
   margin-top: 0.438rem;
-  font-weight: 300;
   letter-spacing: 0.4px;
 }
 
@@ -191,21 +176,16 @@ ul {
 
 .text-input,
 .cat,
-.btn-add {
+.btn-add,
+.fa-user {
   padding: 16px 5px;
   border: 1px solid #e8e8e8;
-  border-radius: 4px;
   font-size: 1rem;
 }
 
 .text-input,
 .cat {
   background-color: transparent;
-}
-
-.cat {
-  color: #121212;
-  opacity: 0.5;
 }
 
 .app {
@@ -215,7 +195,7 @@ ul {
 
 .btn-add {
   border: none;
-  color: #fff;
+  width: max-content;
 }
 
 .form-input {
@@ -226,10 +206,15 @@ ul {
 .form-title {
   font-size: 1.25rem;
   font-weight: bold;
+  margin-top: 2.5rem;
   padding: 2.5rem 0 1.5rem;
   border-top: 0.125rem solid #e8e8e8;
-  color: #121212;
-  opacity: 0.5;
+}
+
+.fa-user {
+  font-size: 20px;
+  padding: 0.877rem;
+  border-radius: 50%;
 }
 
 .bg-grey-light {
@@ -250,15 +235,8 @@ ul {
   color: #4386bf;
 }
 
+.txt-primary,
 .fa-user {
-  font-size: 20px;
-  color: #0290ff;
-  border: 1px solid #e8e8e8;
-  padding: 0.875rem;
-  border-radius: 50%;
-}
-
-.txt-primary {
   color: #0290ff;
 }
 
@@ -328,4 +306,20 @@ ul {
 
 .txt-upper {
   text-transform: uppercase;
+}
+
+.ft-8 {
+  font-size: 0.875rem;
+}
+
+.ft-8a {
+  font-size: 0.813rem;
+}
+
+.bdr-4 {
+  border-radius: 4px;
+}
+
+.fw-300 {
+  font-weight: 300;
 }
