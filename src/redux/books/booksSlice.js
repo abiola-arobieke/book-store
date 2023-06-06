@@ -36,16 +36,19 @@ export const createBook = createAsyncThunk(
   },
 );
 
-export const deleteBook = createAsyncThunk('book/delete', async (id, thunkAPI) => {
-  const url = `${apiUrl}/${id}`;
-  try {
-    const res = await axios.delete(url);
-    thunkAPI.dispatch(getBooksItem());
-    return res.data;
-  } catch (error) {
-    return thunkAPI.rejectWithValue('Something went wrong');
-  }
-});
+export const deleteBook = createAsyncThunk(
+  'book/delete',
+  async (id, thunkAPI) => {
+    const url = `${apiUrl}/${id}`;
+    try {
+      const res = await axios.delete(url);
+      thunkAPI.dispatch(getBooksItem());
+      return res.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue('Something went wrong');
+    }
+  },
+);
 
 const booksSlice = createSlice({
   name: 'books',
